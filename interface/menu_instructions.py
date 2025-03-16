@@ -1,9 +1,10 @@
 import pygame
 
 from interface import boutton
-from utils import afficher_texte, dict_couleurs, largeur_fenetre, hauteur_fenetre
+from utils import afficher_texte, dict_couleurs, largeur_fenetre, hauteur_fenetre, chemin_absolu_dossier
+
 largeur_fenetre = largeur_fenetre + 100
-arriere_plan = pygame.image.load("assets/images/menu_arrière_plan.jpg")
+arriere_plan = pygame.image.load(chemin_absolu_dossier+"assets/images/menu_arrière_plan.jpg")
 arriere_plan = pygame.transform.scale(arriere_plan, (largeur_fenetre, hauteur_fenetre))
 boutton_reprendre = boutton.Boutton(largeur_fenetre // 2, hauteur_fenetre // 2 + 300, 400, 100, "Reprendre", dict_couleurs["bleu boutton"])
 

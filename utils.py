@@ -1,10 +1,11 @@
+import os
 from random import randint
 
 import pygame
 
 
 def récupérer_mot_aléatoire():
-    with open("mots.txt", "r") as fichier:
+    with open(chemin_absolu_dossier+"mots.txt", "r") as fichier:
         mots = fichier.readlines()
     return mots[randint(0, len(mots) - 1)].strip()
 
@@ -38,3 +39,4 @@ dict_couleurs = {
     "bleu marin": (20, 40, 70),
     "bleu boutton": (100, 150, 255)
 }
+chemin_absolu_dossier = os.path.dirname(os.path.abspath(__file__))
