@@ -1,7 +1,7 @@
 import pygame
 
-from interface import boutton
-from utils import afficher_texte, dict_couleurs, largeur_fenetre, hauteur_fenetre, chemin_absolu_dossier
+from . import boutton
+from ..utils import afficher_texte, dict_couleurs, largeur_fenetre, hauteur_fenetre, chemin_absolu_dossier
 
 largeur_fenetre = largeur_fenetre + 100
 arriere_plan = pygame.image.load(chemin_absolu_dossier+"assets/images/menu_arrière_plan.jpg")

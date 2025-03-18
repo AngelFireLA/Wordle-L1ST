@@ -1,10 +1,9 @@
 import pygame
 pygame.init()
 
-from moteur.partie import Partie
-from utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone, \
-    chemin_absolu_dossier
-from interface import menu_pause, boutton, menu_instructions
+from ..moteur.partie import Partie
+from ..utils import largeur_fenetre, hauteur_fenetre, afficher_texte, dict_couleurs, souris_est_dans_zone, chemin_absolu_dossier
+from . import menu_pause, boutton, menu_instructions
 
 decalage = 50
 arriere_plan = pygame.image.load(chemin_absolu_dossier+"assets/images/menu_arrière_plan.jpg")
@@ -87,7 +86,7 @@ def main():
                     else:
                         fenetre = pygame.display.set_mode((largeur_fenetre, hauteur_fenetre))
 
-                if case_selectionnee is not None and not est_victoire and not est_perdu:
+                if not est_victoire and not est_perdu:
                     if event.key == pygame.K_RETURN:
                         toutes_cases_remplies = True
                         for colonne in range(5):

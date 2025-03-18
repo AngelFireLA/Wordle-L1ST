@@ -1,4 +1,4 @@
-from utils import récupérer_mot_aléatoire
+from ..utils import récupérer_mot_aléatoire
 class Partie:
     def __init__(self):
         self.mot = récupérer_mot_aléatoire()
